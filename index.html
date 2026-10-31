@@ -3781,7 +3781,7 @@ If you want to offset all timestamps of a track such that the first one is zero,
 /* ===== Ediciones: una sola app, funciones que se encienden o apagan =====
    EDITION: 'pro' (todo) o 'publica' (sin IA, seguimiento, Cortes FEB, YouTube, cámara en vivo, nube ni envío a Entrenador).
    Para probar la pública desde la edición pro: añade ?ed=publica a la dirección. */
-const EDITION='publica';
+const EDITION='pro';
 const ED=(function(){ let e=EDITION; try{ if(e==='pro'&&new URLSearchParams(location.search).get('ed')==='publica') e='publica'; }catch(_){} return e; })();
 const FEAT=(function(){ const pro=ED==='pro'; return {seguimiento:pro,febcuts:pro,ytmarks:pro,vivo:pro,nube:pro,ia:pro,entrenador:pro}; })();
 if(!FEAT.nube||!FEAT.vivo||!FEAT.seguimiento) document.documentElement.classList.add('ed-pub');
